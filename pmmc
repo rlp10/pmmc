@@ -10,10 +10,6 @@ while [[ -d "$TARGET" ]];do
 	if [[ "$RESPONSE" == "quit" ]];then
 		exit 1
 	fi
-	if [[ "$RESPONSE" == "." ]];then
-		TARGET="$TARGET/*"
-		break
-	fi
 	TARGET="$TARGET/$RESPONSE"
 done
 mplayer "$MPLAYER_OPTIONS" "$TARGET"
