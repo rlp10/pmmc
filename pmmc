@@ -1,0 +1,19 @@
+#!/bin/bash
+
+BASEDIR="/home/username/media"	# base directory of your media
+DMENU_OPTIONS="-i"		# case insensitive
+MPLAYER_OPTIONS="-fs"		# full screen mode
+
+TARGET="$BASEDIR"
+while [[ -d "$TARGET" ]];do
+	RESPONSE=$(echo -e ".\n..\n$(ls "$TARGET")\nquit" | dmenu $DMENU_OPTIONS)
+	if [[ "$RESPONSE" == "quit" ]];then
+		exit 1
+	fi
+	if [[ "$RESPONSE" == "." ]];then
+		TARGET="$TARGET/*"
+		break
+	fi
+	TARGET="$TARGET/$RESPONSE"
+done
+mplayer "$MPLAYER_OPTIONS" "$TARGET"
