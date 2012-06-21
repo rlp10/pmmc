@@ -7,7 +7,7 @@ There are options to set at the top of the script itself, including the base dir
 
 Select a directory to browse its contents.
 
-Select ".." to browse the parent director.
+Select ".." to browse the parent directory.
 
 Select "quit" to quit.
 
