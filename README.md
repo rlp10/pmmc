@@ -19,6 +19,8 @@ Select a directory to browse its contents.
 
 Select ".." to browse the parent directory.
 
+Select "." to play the files in the current directory.
+
 Select "quit" to quit.
 
 That's it. :)
