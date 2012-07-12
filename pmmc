@@ -1,8 +1,9 @@
 #!/bin/bash
 
-BASEDIR="/home/username/media"	# base directory of your media
+BASEDIR="/home/rlp10/media"	# base directory of your media
 DMENU_OPTIONS="-i"		# case insensitive
-MPLAYER_OPTIONS="-fs"		# full screen mode
+MEDIA_PLAYER="mplayer"		# media player
+MEDIA_PLAYER_OPTIONS="-fs"	# full screen mode
 
 TARGET="$BASEDIR"
 while [[ -d "$TARGET" ]];do
@@ -10,6 +11,10 @@ while [[ -d "$TARGET" ]];do
 	if [[ "$RESPONSE" == "quit" ]];then
 		exit 1
 	fi
+	if [[ "$RESPONSE" == "." ]];then
+		$MEDIA_PLAYER "$MEDIA_PLAYER_OPTIONS" "$TARGET/"*
+		exit 0
+	fi
 	TARGET="$TARGET/$RESPONSE"
 done
-mplayer "$MPLAYER_OPTIONS" "$TARGET"
+$MEDIA_PLAYER "$MEDIA_PLAYER_OPTIONS" "$TARGET"
