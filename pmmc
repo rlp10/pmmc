@@ -1,9 +1,6 @@
 #!/bin/bash
 
-BASEDIR="/home/rlp10/media"	# base directory of your media
-DMENU_OPTIONS="-i"		# case insensitive
-MEDIA_PLAYER="mplayer"		# media player
-MEDIA_PLAYER_OPTIONS="-fs"	# full screen mode
+source $HOME/.pmmcrc
 
 TARGET="$BASEDIR"
 while [[ -d "$TARGET" ]];do

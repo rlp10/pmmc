@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Edit this feel and then copy it to $HOME/.pmmcrc
+
+BASEDIR="/home/username/media"     # base directory of your media
+DMENU_OPTIONS="-i"                 # case insensitive
+MEDIA_PLAYER="mplayer"             # media player
+MEDIA_PLAYER_OPTIONS="-fs"         # full screen mode
