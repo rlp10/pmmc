@@ -10,6 +10,8 @@ Ensure you have dmenu and mplayer installed.
 
 Modify and copy example_pmmcrc to your $HOME directory with the filename ".pmmcrc".
 
+Copy pmmc somewhere onto your path, such as $HOME/bin.
+
 Usage
 -----
 
