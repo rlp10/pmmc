@@ -8,7 +8,7 @@ Installation
 
 Ensure you have dmenu and mplayer installed.
 
-There are options to set at the top of the script itself, particularly the base directory of your media.
+Modify and copy example_pmmcrc to your $HOME directory with the filename ".pmmcrc".
 
 Usage
 -----
